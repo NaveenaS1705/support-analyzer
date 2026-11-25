@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-body, html { background-color: #f3f4f6; color: #1f2937; height: 100%; }
+
+/* 1. Fix the body so it doesn't lock the page */
+body, html { background-color: #f3f4f6; color: #1f2937; height: 100%; margin: 0; padding: 0; }
 
 /* --- MODAL / LOGIN --- */
 .modal-overlay {
@@ -27,11 +29,11 @@ body, html { background-color: #f3f4f6; color: #1f2937; height: 100%; }
 /* --- CUSTOMER PORTAL --- */
 .customer-portal-layout { 
   min-height: 100vh; 
-  height: auto;               /* 👈 Forces height to expand with content */
-  overflow-y: auto;           /* 👈 Allows scrolling */
+  width: 100%;
   background: #f8fafc; 
   display: flex; 
   flex-direction: column; 
+  /* REMOVED overflow-y: auto; This allows the whole page to scroll naturally */
 }
 
 .top-navbar { background: #1e293b; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
@@ -73,6 +75,7 @@ body, html { background-color: #f3f4f6; color: #1f2937; height: 100%; }
   display: grid; 
   grid-template-columns: 260px 350px 1fr; 
   height: 100vh; 
+  width: 100vw;
   background: white;
   overflow: hidden; /* CRITICAL: Prevents whole-page scrolling */
 }
