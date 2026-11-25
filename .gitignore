@@ -12,3 +12,20 @@ app/.env
 
 # Frontend build files
 app/static/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+.env
+app/uploads/
+
+# Node
+node_modules/
+dist/
+build/
+
+# OS / Editor
+.DS_Store
+.vscode/

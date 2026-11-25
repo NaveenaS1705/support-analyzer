@@ -5,3 +5,4 @@ groq
 dnspython
 edge-tts
 pydantic
+python-dotenv
