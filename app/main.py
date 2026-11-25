@@ -19,6 +19,7 @@ from groq import Groq
 from pymongo import MongoClient, ReturnDocument
 from bson import ObjectId
 from bson.errors import InvalidId
+from fastapi.middleware.cors import CORSMiddleware
 
 # --- CONFIGURATION ---
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
