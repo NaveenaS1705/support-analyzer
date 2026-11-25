@@ -45,10 +45,7 @@ app = FastAPI()
 # --- ADD THIS BLOCK ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://support-analyzer.vercel.app",   # 👈 Replace with YOUR actual Vercel URL
-        "http://localhost:5173",                  # Local dev
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
