@@ -1,0 +1,14 @@
+# Ignore uploaded user files
+app/uploads/
+uploads/
+
+# Python environment
+venv/
+__pycache__/
+
+# Environment variables
+.env
+app/.env
+
+# Frontend build files
+app/static/
