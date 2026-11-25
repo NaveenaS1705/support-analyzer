@@ -40,6 +40,19 @@ UPLOAD_DIR = os.path.join(current_dir, "uploads")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app = FastAPI()
+
+# --- ADD THIS BLOCK ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://support-analyzer.vercel.app",   # 👈 Replace with YOUR actual Vercel URL
+        "http://localhost:5173",                  # Local dev
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 def get_next_sequence_value(sequence_name):
