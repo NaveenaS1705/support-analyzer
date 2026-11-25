@@ -6,3 +6,4 @@ dnspython
 edge-tts
 pydantic
 python-dotenv
+python-multipart
